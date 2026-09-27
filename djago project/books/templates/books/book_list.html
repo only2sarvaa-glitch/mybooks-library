@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Book Library</title>
+</head>
+<body>
+
+    <h1>My Book Library</h1>
+
+    <a href="{% url 'add_book' %}">Add New Book</a>
+
+    <br><br>
+
+    <table border="1">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+        </tr>
+
+        {% for book in books %}
+        <tr>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>
